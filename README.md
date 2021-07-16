@@ -3,6 +3,10 @@
 ## Purpose 
 To provide data on the latest Covid-19 cases around Australia. 
 
+## About
+This is a backend API with no view.  
+The data is called from the Covid 19 API (see references).  
+This is still in development, the plan is to set up a (possibly cron job) task to automate sending the text message once a day. 
 
 ## References
 COVID 19 API
