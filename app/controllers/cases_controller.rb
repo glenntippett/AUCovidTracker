@@ -9,7 +9,7 @@ class CasesController < ApplicationController
     state_cases = new_case.sort_case_numbers(historic_cases)
     cases_string = new_case.build_cases_string(state_cases)
     if Report.last.cases == cases_string
-      puts 'Report exists'
+      puts '⚠️ Report exists - no text sent ⚠️'
     else
       Report.create(cases: cases_string)
       phonebook = Contact.all
