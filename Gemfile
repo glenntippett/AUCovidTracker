@@ -6,6 +6,7 @@ ruby '2.7.3'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pg'
+gem 'pry-byebug'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 6.0.0'
 gem 'twilio-ruby'

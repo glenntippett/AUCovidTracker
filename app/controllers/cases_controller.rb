@@ -8,8 +8,13 @@ class CasesController < ApplicationController
     new_case = Case.new
     state_cases = new_case.sort_case_numbers(historic_cases)
     cases_string = new_case.build_cases_string(state_cases)
-    phonebook = Contact.all
-    twilio = TwilioApi.new
-    twilio.txt_case_numbers(cases_string, phonebook) if state_cases.instance_of?(Hash)
+    if Report.last.cases == cases_string
+      puts 'Report exists'
+    else
+      Report.create(cases: cases_string)
+      phonebook = Contact.all
+      twilio = TwilioApi.new
+      twilio.txt_case_numbers(cases_string, phonebook) if state_cases.instance_of?(Hash)
+    end
   end
 end
