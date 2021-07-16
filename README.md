@@ -14,11 +14,11 @@ https://github.com/M-Media-Group/Covid-19-API/
 ENV
 https://github.com/bkeepers/dotenv
 
+Heroku Scheduled Rake Task
+https://devcenter.heroku.com/articles/scheduler 
+
 Rails API
 https://guides.rubyonrails.org/api_app.html
 
 Twilio
 https://www.twilio.com/docs/api
-
-Whenever (scheduled Rake task)
-https://github.com/javan/whenever
