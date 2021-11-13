@@ -1,6 +1,13 @@
 require 'twilio-ruby'
 
 class CasesController < ApplicationController
+
+  def goodbye
+    cases_string = 'I am turning this off now! GOODBYE!!'
+    phonebook = Contact.all
+    twilio.txt_case_numbers(cases_string, phonebook)
+  end
+
   def new(country = 'Australia')
     url = "https://covid-api.mmediagroup.fr/v1/history?country=#{country}&status=confirmed"
     covid_api = CovidApi.new
