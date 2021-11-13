@@ -5,6 +5,7 @@ class CasesController < ApplicationController
   def goodbye
     cases_string = 'I am turning this off now! GOODBYE!!'
     phonebook = Contact.all
+    twilio = TwilioApi.new
     twilio.txt_case_numbers(cases_string, phonebook)
   end
 
